@@ -1,6 +1,5 @@
 package tp1;
 
-import org.junit.Rule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -20,6 +19,10 @@ public class Exe2 {
 		isGreater(input[0], input[1]);
 	}
 
+	/**
+	 * @description:  Function that asks the user for two numbers and returns them in an array
+	 * @return int[] tab
+	 */
 	public static int[] input() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Entrez un nombre");
@@ -29,6 +32,13 @@ public class Exe2 {
 		return new int[]{a, b};
 	}
 
+	/**
+	 * @description: Fonction that double the first parameter and divides the second parameter by two
+	 *
+	 * @param a int
+	 * @param b int
+	 * @return int[] tab
+	 */
 	static int[] swap(int a, int b) {
 		int[] tab = new int[2];
 		int temp = a;
@@ -58,6 +68,13 @@ public class Exe2 {
 		return tab;
 	}
 
+	/**
+	 * @description: Fonction that checks if the first parameter is greater than the second parameter
+	 *
+	 * @param a int
+	 * @param b int
+	 * @return boolean
+	 */
 	public static boolean isGreater(int a, int b) {
 		if(a > b) {
 			System.out.println("\n========== isGreater() ==========");
@@ -88,6 +105,9 @@ public class Exe2 {
 		Assertions.assertEquals(1, tab[1]);
 	}
 
+	/**
+	 * Tests the input() method.
+	 */
 	@Test
 	public void testInput() {
 
