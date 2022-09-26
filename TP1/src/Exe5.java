@@ -7,19 +7,33 @@ public class Exe5 {
 	//Affichage dans l'ordre croissant
 
 	public static void main(String[] args) {
+		int a,b,c;
 		Scanner sc = new Scanner(System.in);
-		int[] tab = new int[3];
 		System.out.println("Entrez 3 nombres");
-		tab[0] = sc.nextInt();
-		tab[1] = sc.nextInt();
-		tab[2] = sc.nextInt();
 
-		Arrays.sort(tab);
+		a = sc.nextInt();
+		b = sc.nextInt();
+		c = sc.nextInt();
 
-		System.out.println("Les nombres dans l'ordre croissant sont :");
-		for (int i : tab) {
-			System.out.println(i);
+		// sort the numberswith an if statement
+		if (a > b) {
+			int temp = a;
+			a = b;
+			b = temp;
 		}
+		if (a > c) {
+			int temp = a;
+			a = c;
+			c = temp;
+		}
+		if (b > c) {
+			int temp = b;
+			b = c;
+			c = temp;
+		}
+
+		System.out.println("Les nombres dans l'ordre croissant sont: " + a + ", " + b + ", " + c);
+
 
 	}
 }
