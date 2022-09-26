@@ -23,7 +23,7 @@ public class Exe2 {
 	 * @description:  Function that asks the user for two numbers and returns them in an array
 	 * @return int[] tab
 	 */
-	public static int[] input() {
+	public static int[] input() throws NumberFormatException {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Entrez un nombre");
 		int a = sc.nextInt();
@@ -111,14 +111,10 @@ public class Exe2 {
 	@Test
 	public void testInput() {
 
-		String input1 = "5\n10";
+		final String input1 = "5\n10";
 		InputStream in1 = new ByteArrayInputStream(input1.getBytes());
 		System.setIn(in1);
 		Assertions.assertArrayEquals(new int[]{5, 10} , input());
-
-		String input2 = "a\nl";
-		InputStream in2 = new ByteArrayInputStream(input2.getBytes());
-		System.setIn(in2);
 	}
 
 	/**
