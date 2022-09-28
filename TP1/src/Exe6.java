@@ -7,23 +7,12 @@ public class Exe6 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Integer[] duration = {24, 60 , 60 };
-		String[] units = {"jour", "heures", "minutes", "secondes"};
-		int[] result = new int[4];
-
-
 		System.out.println("Entrez le nombre de secondes");
-		int secondes = sc.nextInt();
-
-		int u = 0;
-		for (int i : duration) {
-			result[0] = secondes / duration[u];
-			secondes %= duration[u];
-			u++;
-		}
-		for (int i = 0; i < result.length; i++) {
-			System.out.println(result[i] + " " + units[i]);
-		}
-
+		int s = sc.nextInt();
+		int d = s / 86400;
+		int h = (s % 86400) / 3600;
+		int m = ((s % 86400) % 3600) / 60;
+		int sec = ((s % 86400) % 3600) % 60;
+		System.out.println(d + "d" + h + "h" + m + "m" + sec + "s");
 	}
 }
