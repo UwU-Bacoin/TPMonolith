@@ -13,8 +13,8 @@ public class Exe1 {
 	public static void main(String[] args) {
 		System.out.println(s);
 	}
-	@Test
-	public void test() {
-		assertEquals("Hello World", s);
-	}
+	//@Test
+	//public void test() {
+	//	assertEquals("Hello World", s);
+	//}
 }

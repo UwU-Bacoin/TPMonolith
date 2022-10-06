@@ -24,22 +24,15 @@ public class Exe3 {
 	}
 
 	public static boolean isBissextile(int year) {
-		if(year % 4 == 0) {
-			if(year % 100 == 0) {
-				return year % 400 == 0;
-			}
-			else {
-				return true;
-			}
-		}
-		else {
-			return false;
-		}
+		return year%4 == 0 && year % 100 != 0 || year % 400 == 0;
 	}
 
 	@Test
 	public void test() {
 		Assertions.assertTrue(isBissextile(2000));
-		Assertions.assertFalse(isBissextile(2001));
+		Assertions.assertFalse(isBissextile(2100));
+		Assertions.assertTrue(isBissextile(2020));
+		Assertions.assertFalse(isBissextile(2022));
+		Assertions.assertFalse(isBissextile(2019));
 	}
 }

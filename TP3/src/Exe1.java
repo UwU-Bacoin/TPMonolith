@@ -9,6 +9,20 @@ public class Exe1 {
 
 	public static void main(String[] args) {
 		// Appeler vos fonctions ici
+		alphabet();
+		alphabetReverse();
+	}
 
+	public static void alphabet() {
+		for (char i = 'a'; i <= 'z'; i++) {
+			System.out.print(i + " ");
+		}
+		System.out.println();
+	}
+	public static void alphabetReverse() {
+		for (char i = 'Z'; i >= 'A'; i--) {
+			System.out.print(i + " ");
+		}
+		System.out.println();
 	}
 }

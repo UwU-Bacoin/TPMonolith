@@ -14,6 +14,7 @@ public class Exe5 {
 		a = sc.nextInt();
 		b = sc.nextInt();
 		c = sc.nextInt();
+		sc.close();
 
 		// sort the numberswith an if statement
 		if (a > b) {
